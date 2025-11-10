@@ -25,9 +25,10 @@ if st.button("Prediksi", type="primary"):
 
 	prediksi = best_rf_model.predict(data_baru)[0]
 	presentase = max(best_rf_model.predict_proba(data_baru)[0])
-	st.success(f"Prediksi apakah nasabah akan berlangganan : {prediksi}.")
+	st.success(f"Prediksi apakah nasabah akan berlangganan : {prediksi}")
 	st.error(f"Tingkat keyakinan : {presentase*100:.2f}%")
 	st.balloons()
 
 st.divider()
+
 st.caption("Dibuat untuk seleksi LKS - classification")
